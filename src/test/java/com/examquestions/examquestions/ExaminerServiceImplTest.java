@@ -25,13 +25,10 @@ public class ExaminerServiceImplTest {
     @Mock
     public QuestionService questionService;
 
-    public ExaminerServiceImplTest(QuestionService questionService) {
-        this.questionService = questionService;
-    }
 
     @Test
     void shouldGetAllQuestions() {
-        when(questionService.getAll()).thenReturn(QUESTION_SET);
+        when(questionService.getAll()).thenReturn(QUESTIONS_1);
         when(questionService.getRandomQuestion()).thenReturn(FIRST_QUESTION_ANSWER);
         assertEquals(questionService.getAll(), out.getQuestions(1));
     }

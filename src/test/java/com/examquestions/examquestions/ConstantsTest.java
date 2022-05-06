@@ -15,7 +15,6 @@ public class ConstantsTest {
     public static final String ANSWER_2 = "Answer two";
     public static final String ANSWER_3 = "Answer tree";
 
-    public static final String INVALID_NUMBER_OF_QUESTIONS = "invalidNumberOfQuestions";
 
     public static final Question FIRST_QUESTION_ANSWER = new Question(QUESTION_1, ANSWER_1);
     public static final Question SECOND_QUESTION_ANSWER = new Question(QUESTION_2, ANSWER_2);

@@ -23,11 +23,12 @@ public class ExaminerServiceImpl implements ExaminerService {
     @Override
     public Collection<Question> getQuestions(int questionsAmount) {
         Set<Question> questions = new HashSet<>();
-        if (questionsAmount > questionService.getSize()) {
+        if (questionsAmount > questionService.getAll().size()) {
             throw new InvalidAmountQuestionsException();
         }
-        while(questionsAmount != questions.size())
+        while(questions.size() != questionsAmount) {
             questions.add(questionService.getRandomQuestion());
+        }
         return questions;
     }
 
